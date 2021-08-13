@@ -1,0 +1,17 @@
+<ion-header class="ion-no-border">
+	<ion-toolbar color="warning">
+		<ion-buttons slot="end">
+			<ion-back-button defaultHref="home"></ion-back-button>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content color="warning">
+	<ion-card *ngFor="let exam of exams" (click)="navigateToExam(exam)" color="dark" style="cursor:pointer;">
+		<ion-card-header>
+			<ion-card-title style="font-weight: bolder;">
+				{{exam}}
+			</ion-card-title>
+		</ion-card-header>
+	</ion-card>
+</ion-content>
