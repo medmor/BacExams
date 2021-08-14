@@ -16,9 +16,6 @@ export class SectionViewComponent {
 	ngOnInit() {
 	}
 
-	//onSectionClick(section: CourseNodeModel) {
-	//	this.section = section;
-	//}
 
 	onCollapsButtonClick() {
 		this.collapsed = !this.collapsed;

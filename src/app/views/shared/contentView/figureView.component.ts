@@ -5,7 +5,7 @@ import { ExamsServerService } from "../../../services/examsServer.service";
 @Component({
 	template:
 		`
-        <ion-card-content>
+        <ion-card-content class='figure'>
             <img [src]="imgSrc()"
                 [alt]="imgSrc()" />
         </ion-card-content>

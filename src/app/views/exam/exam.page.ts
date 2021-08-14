@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { CourseNodeModel } from "../../model/courseNode.model";
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { parse } from "flatted";
 
 import { ExamsServerService } from '../../services/examsServer.service';
@@ -14,7 +14,10 @@ import { ExamsServerService } from '../../services/examsServer.service';
 export class ExamPage implements OnInit {
 
 	course: CourseNodeModel;
-	constructor(private router: Router, public examServer: ExamsServerService) {
+	constructor(private router: Router, private route: ActivatedRoute, public examServer: ExamsServerService) { }
+
+	ngOnInit() {
+		this.parseRoute();
 		this.examServer.getExam().subscribe(data => {
 			this.course = parse(JSON.stringify(data));
 		}, err => {
@@ -22,10 +25,11 @@ export class ExamPage implements OnInit {
 			this.router.navigateByUrl('/home');
 		});
 	}
-
-	ngOnInit() {
-
+	parseRoute() {
+		if (!this.examServer.branch) {
+			this.examServer.examName = this.route.snapshot.params['title'];
+			this.examServer.branch = this.route.snapshot.params['title'].split('-')[1];
+		}
 	}
-
 
 }

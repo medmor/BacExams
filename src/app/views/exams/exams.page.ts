@@ -14,7 +14,7 @@ export class ExamsPage {
 
 	public navigateToExam(exam: string): void {
 		this.examsServer.examName = this.parseExamName(exam);
-		this.router.navigateByUrl('exam');
+		this.router.navigateByUrl('exam/' + this.examsServer.examName);
 	}
 	private parseExamName(exam: string): string {
 		const name = exam.split('–')

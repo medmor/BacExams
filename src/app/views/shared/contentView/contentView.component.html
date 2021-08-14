@@ -1,18 +1,22 @@
+
 <ng-container [ngSwitch]="content.type">
-    <simple-content-view *ngSwitchCase="'SimpleContent'" [content]='content'></simple-content-view>
-    <figure-view *ngSwitchCase="'Figure'" [content]='content'></figure-view>
-    <ng-container *ngSwitchCase="'Activity'">
-        <ng-container *ngFor="let child of content.children">
-            <content-view [content]="child"></content-view>
-        </ng-container>
-    </ng-container>
-    <ng-container *ngSwitchCase="'ActivityQuestion'">
-        <simple-content-view [content]='content.children[0]'></simple-content-view>
-        <ion-button expand="full" (click)="presentModal()">Réponse</ion-button>
-    </ng-container>
-    <ng-container *ngSwitchCase="'ActivityAnswer'">
-        <ng-container *ngFor="let child of content.children">
-            <content-view [content]="child"></content-view>
-        </ng-container>
-    </ng-container>
+	<simple-content-view *ngSwitchCase="'SimpleContent'" [content]='content'></simple-content-view>
+	<figure-view *ngSwitchCase="'Figure'" [content]='content'></figure-view>
+	<ng-container *ngSwitchCase="'Activity'">
+		<ng-container *ngFor="let child of content.children">
+			<content-view [content]="child"></content-view>
+		</ng-container>
+	</ng-container>
+	<ng-container *ngSwitchCase="'ActivityQuestion'">
+		<simple-content-view [content]='content.children[0]'></simple-content-view>
+		<ion-button expand="full" (click)="presentModal()">Réponse</ion-button>
+	</ng-container>
+	<ng-container *ngSwitchCase="'ActivityAnswer'">
+		<ion-button size="small" expand="full" color="light" (click)="dismissModal()">
+			<ion-icon name="close-outline"></ion-icon>
+		</ion-button>
+		<ng-container *ngFor="let child of content.children">
+			<content-view [content]="child"></content-view>
+		</ng-container>
+	</ng-container>
 </ng-container>

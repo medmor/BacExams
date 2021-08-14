@@ -12,10 +12,9 @@ export class ExamsServerService {
 	public readonly baseUrl = 'assets/exams/';
 	public branch = '';
 	public examName = '';
+	public answarModal: HTMLIonModalElement;
 
-	constructor(private http: HttpClient,) {
-		console.log(window.location.hostname);
-	}
+	constructor(private http: HttpClient,) { }
 
 	public getAllExams(branch: string): string[] {
 		return AllExams[branch];
