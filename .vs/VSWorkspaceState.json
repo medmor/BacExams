@@ -3,13 +3,9 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\model",
     "\\src\\app\\services",
-    "\\src\\app\\views",
-    "\\src\\app\\views\\home",
-    "\\src\\app\\views\\shared",
     "\\src\\app\\views\\shared\\contentView"
   ],
-  "SelectedNode": "\\src\\app\\views\\shared\\contentView\\figureView.component.ts",
+  "SelectedNode": "\\src\\app",
   "PreviewInSolutionExplorer": false
 }

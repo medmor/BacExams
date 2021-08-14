@@ -13,7 +13,9 @@ export class ExamsServerService {
 	public branch = '';
 	public examName = '';
 
-	constructor(private http: HttpClient,) { }
+	constructor(private http: HttpClient,) {
+		console.log(window.location.hostname);
+	}
 
 	public getAllExams(branch: string): string[] {
 		return AllExams[branch];
