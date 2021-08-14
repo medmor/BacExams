@@ -1,5 +1,6 @@
 import { Component, Input } from "@angular/core";
 import { CourseNodeModel } from "src/app/model/courseNode.model";
+import { ExamsServerService } from "../../../services/examsServer.service";
 
 @Component({
 	template:
@@ -14,11 +15,14 @@ import { CourseNodeModel } from "src/app/model/courseNode.model";
 export class FigureViewComponent {
 
 	@Input() content: CourseNodeModel;
-	constructor() {
+	constructor(public examServerService: ExamsServerService) {
 	}
 
 	public imgSrc() {
-		return undefined;
+		return this.examServerService.baseUrl
+			+ this.examServerService.branch
+			+ '/figures/' + this.examServerService.examName
+			+ '/' + this.content.content + '.png';
 	}
 
 

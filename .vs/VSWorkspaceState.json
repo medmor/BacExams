@@ -3,10 +3,13 @@
     "",
     "\\src",
     "\\src\\app",
+    "\\src\\app\\model",
     "\\src\\app\\services",
-    "\\src\\app\\views\\exams",
-    "\\src\\app\\views\\shared\\sectionView"
+    "\\src\\app\\views",
+    "\\src\\app\\views\\home",
+    "\\src\\app\\views\\shared",
+    "\\src\\app\\views\\shared\\contentView"
   ],
-  "SelectedNode": "\\src\\app\\services\\examsServer.service.ts",
+  "SelectedNode": "\\src\\app\\views\\shared\\contentView\\figureView.component.ts",
   "PreviewInSolutionExplorer": false
 }
