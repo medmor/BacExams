@@ -12,11 +12,14 @@
 		<ion-button expand="full" (click)="presentModal()">Réponse</ion-button>
 	</ng-container>
 	<ng-container *ngSwitchCase="'ActivityAnswer'">
-		<ion-button size="small" expand="full" color="light" (click)="dismissModal()">
-			<ion-icon name="close-outline"></ion-icon>
-		</ion-button>
-		<ng-container *ngFor="let child of content.children">
-			<content-view [content]="child"></content-view>
-		</ng-container>
+		<div>
+			<ion-button size="small" expand="full" color="light" (click)="dismissModal()">
+				<ion-icon name="close-outline"></ion-icon>
+			</ion-button>
+			<ng-container *ngFor="let child of content.children">
+				<content-view [content]="child"></content-view>
+			</ng-container>
+		</div>
+
 	</ng-container>
 </ng-container>

@@ -6,8 +6,9 @@ import { ExamsServerService } from "../../../services/examsServer.service";
 	template:
 		`
         <ion-card-content class='figure'>
-            <img [src]="imgSrc()"
-                [alt]="imgSrc()" />
+			<a [href]="imgSrc()" target="_blank">
+				<img [src]="imgSrc()" [alt]="alt()"/>
+			</a>
         </ion-card-content>
     `,
 	selector: "figure-view"
@@ -23,6 +24,10 @@ export class FigureViewComponent {
 			+ this.examServerService.branch
 			+ '/figures/' + this.examServerService.examName
 			+ '/' + this.content.content + '.png';
+	}
+	public alt() {
+		const title = this.examServerService.exam.title;
+		return title.substr(4, title.length - 9) + ' ' + this.content.content;
 	}
 
 

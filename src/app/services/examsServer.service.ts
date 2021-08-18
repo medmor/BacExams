@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { AllExams } from '../model/examsDammyDataBase.model';
 import { Observable } from 'rxjs';
+import { CourseNodeModel } from '../model/courseNode.model';
 
 @Injectable({
 	providedIn: 'root',
@@ -10,9 +11,10 @@ import { Observable } from 'rxjs';
 export class ExamsServerService {
 
 	public readonly baseUrl = 'assets/exams/';
+	public exam: CourseNodeModel;
 	public branch = '';
 	public examName = '';
-	public answarModal: HTMLIonModalElement;
+	public answerModal: HTMLIonModalElement;
 
 	constructor(private http: HttpClient,) { }
 

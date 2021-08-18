@@ -23,12 +23,12 @@ export class ContentViewComponent {
 			}
 		});
 		await modal.present();
-		this.examsService.answarModal = modal;
+		this.examsService.answerModal = modal;
 	}
 	dismissModal() {
 
-		if (this.examsService.answarModal) {
-			this.examsService.answarModal.dismiss().then(() => { this.examsService.answarModal = null; });
+		if (this.examsService.answerModal) {
+			this.examsService.answerModal.dismiss().then(() => { this.examsService.answerModal = null; });
 		}
 	}
 }
