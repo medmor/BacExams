@@ -3,13 +3,9 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\services",
     "\\src\\app\\views",
-    "\\src\\app\\views\\exam",
-    "\\src\\app\\views\\exams",
-    "\\src\\app\\views\\shared",
-    "\\src\\app\\views\\shared\\contentView"
+    "\\src\\app\\views\\home"
   ],
-  "SelectedNode": "\\src\\app\\views\\exam\\exam.page.ts",
+  "SelectedNode": "\\src\\app\\views\\home\\home.page.html",
   "PreviewInSolutionExplorer": false
 }
