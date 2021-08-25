@@ -4,10 +4,11 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\views",
+    "\\src\\app\\views\\exams",
     "\\src\\app\\views\\shared",
     "\\src\\app\\views\\shared\\contentView",
     "\\src\\app\\views\\shared\\sectionView"
   ],
-  "SelectedNode": "\\src\\app\\views\\shared\\contentView\\contentView.component.ts",
+  "SelectedNode": "\\src\\app\\views\\exams\\exams.page.ts",
   "PreviewInSolutionExplorer": false
 }
